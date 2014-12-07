@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<current>
+  <city id="4164138" name="Miami">
+    <coord lon="-80.19" lat="25.77"/>
+    <country>US</country>
+    <sun rise="2014-12-04T11:52:51" set="2014-12-04T22:29:35"/>
+  </city>
+  <temperature value="299.44" min="299.15" max="300.15" unit="kelvin"/>
+  <humidity value="69" unit="%"/>
+  <pressure value="1018" unit="hPa"/>
+  <wind>
+    <speed value="5.1" name="Gentle Breeze"/>
+    <direction value="70" code="ENE" name="East-northeast"/>
+  </wind>
+  <clouds value="75" name="broken clouds"/>
+  <visibility/>
+  <precipitation mode="no"/>
+  <weather number="803" value="broken clouds" icon="04d"/>
+  <lastupdate value="2014-12-04T20:08:00"/>
+</current>
+

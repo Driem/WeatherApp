@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<current>
+  <city id="3600026" name="Puerto Cortes">
+    <coord lon="-87.93" lat="15.86"/>
+    <country>Honduras</country>
+    <sun rise="2014-12-06T12:06:20" set="2014-12-06T23:19:44"/>
+  </city>
+  <temperature value="296.15" min="296.15" max="296.15" unit="kelvin"/>
+  <humidity value="100" unit="%"/>
+  <pressure value="1018" unit="hPa"/>
+  <wind>
+    <speed value="0.94" name="Calm"/>
+    <direction value="342.51" code="NNW" name="North-northwest"/>
+  </wind>
+  <clouds value="75" name="broken clouds"/>
+  <visibility/>
+  <precipitation value="1" mode="rain" unit="3h"/>
+  <weather number="803" value="broken clouds" icon="04n"/>
+  <lastupdate value="2014-12-06T05:00:00"/>
+</current>
+
