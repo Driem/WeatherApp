@@ -111,7 +111,7 @@ string GetDireccion(string direct)
 {
     stringstream ss;
     string Direccion;
-    ss <<"bin\\wget.exe \"http://api.openweathermap.org/data/2.5/weather?q="<<direct<<"&mode=xml\"";
+    ss <<"bin\\wget.exe -N -nv \"http://api.openweathermap.org/data/2.5/weather?q="<<direct<<"&mode=xml\"";
     Direccion = ss.str();
     return Direccion;
 }
