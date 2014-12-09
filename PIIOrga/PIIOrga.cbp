@@ -35,7 +35,6 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="tinyxml2.cpp" />
 		<Unit filename="tinyxml2.h" />
-		<Unit filename="weather@q=Puerto Cortes&amp;mode=xml" />
 		<Extensions>
 			<code_completion />
 			<envvars />

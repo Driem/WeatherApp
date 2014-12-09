@@ -154,19 +154,44 @@ void Show(string direct)
 
 int main()
 {
+/* HWND hwnd_win = GetForegroundWindow();
+    ShowWindow(hwnd_win,SW_HIDE);
+    //Espera 4 segundos
+    _sleep(4000);
+    //vuelve a mostrar la consola.
+    ShowWindow(hwnd_win,SW_SHOW);*/
+
 
     string Direccion,direct;
-    cout<<"Ingrese Ciudad"<<endl;
-    getline(cin,direct);
+    //cout<<"Ingrese Ciudad"<<endl;
+    //getline(cin,direct);
+   direct = "Puerto cortes";
     Direccion = GetDireccion(direct);
     system(Direccion.c_str());
     Show(direct);
+string T = static_cast<std::ostringstream*>(&(ostringstream() << getTemperatureEnCelcius(GetArchivo(direct))))->str();
 
-/*
-    RenderWindow window(sf::VideoMode(800, 500), " Organizacion de Archivos: Clima ",Style::Titlebar | Style::Close);
-     Texture Fondo;
-     Fondo.loadFromFile("C:\\Users\\DELL-INSPIRON15R\\Desktop\\Universidad\\PIIOrga\\Recursos\\Nubes (7).png");
+    sf::Font font;
+            if (!font.loadFromFile("GoodDog.otf"))
+            return EXIT_FAILURE;
+            sf::Text text(getCityName(GetArchivo(direct)), font, 30);
+            sf::Text text1(getWindStas(GetArchivo(direct)), font, 30);
+           sf::Text text2(T, font, 30);
+            sf::Text text3(GetTypeCloud(GetArchivo(direct)), font, 30);
+            text.setPosition(130,10);
+            text1.setPosition(130,40);
+            text2.setPosition(130,70);
+            text3.setPosition(130,100);
+            text.setColor(Color::Yellow);
+            text1.setColor(Color::Yellow);
+            text2.setColor(Color::Yellow);
+            text3.setColor(Color::Yellow);
+
+    Texture Fondo;
+     Fondo.loadFromFile("Recursos\\descarga.jpg");
     Sprite Fondo1(Fondo);
+    RenderWindow window(sf::VideoMode(341, 148), " Organizacion de Archivos: Clima ",Style::Titlebar | Style::Close);
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -181,8 +206,12 @@ int main()
         {
 
 
-            if(event.type ==Event::Closed)
+            if(event.type == Event::Closed){
                 window.close();
+                exit(0);
+
+            }
+
 
 
     if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
@@ -199,17 +228,17 @@ int main()
     window.clear();
 
        window.draw(Fondo1,RenderStates::Default);
-
-
-
-
+       window.draw(text);
+       window.draw(text1);
+       window.draw(text2);
+       window.draw(text3);
 
 
         window.display();
 
     }
 
-    }*/
+    }
 
     system("PAUSE");
     return 0;
